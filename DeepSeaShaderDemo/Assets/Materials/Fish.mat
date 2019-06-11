@@ -5,12 +5,13 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Fish
-  m_Shader: {fileID: 4800000, guid: 01adbcfe7ee4e3040bb94e9c670f1939, type: 3}
+  m_Shader: {fileID: 4800000, guid: 722efa9db8c31b646abcd61dfb07b959, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 1
-  m_EnableInstancingVariants: 0
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -60,11 +61,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Albedo2Scale: 115
+    - _Amplitude: 0.5
+    - _AmplitudeOffset: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Float0: 1
+    - _Frequency: 8
     - _GeometricPeriod: 4
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -75,17 +79,23 @@ Material:
     - _Metallic: 0
     - _Metalness: 0
     - _Mode: 0
+    - _NoiseScale: 1000
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Smoothness: 0.199
+    - _PositionalOffsetScalar: 25
+    - _PositoinalAmplitudeScalar: 0.5
+    - _Smoothness: 0.5
     - _SmoothnessCap: 0.6
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SwimCycleOffset: 0
+    - _TimeOffset: 0
     - _TimePeriod: 0.1
     - _TimeScale: 10
     - _UVSec: 0
+    - _VertexLerpOffset: 0.425
+    - _VertexLerpScale: 500
     - _WaveMagnitude: 0.25
     - _WavePeriod: 5
     - _ZWrite: 1
@@ -93,6 +103,7 @@ Material:
     m_Colors:
     - _AlbedoDark: {r: 0, g: 0, b: 0, a: 1}
     - _AlbedoLight: {r: 1, g: 1, b: 1, a: 1}
+    - _BottomColor: {r: 0.14146496, g: 0.15164857, b: 0.16037738, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DiffuseBottom: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
     - _DiffuseColor: {r: 0.20692419, g: 0.25647134, b: 0.2830189, a: 1}
@@ -100,3 +111,4 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _FogColor: {r: 0.05490196, g: 0.12941177, b: 0.15294118, a: 1}
+    - _TopColor: {r: 0, g: 0.051886797, b: 0.103773594, a: 0}

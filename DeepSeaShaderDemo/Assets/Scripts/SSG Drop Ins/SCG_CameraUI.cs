@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class SCG_CameraUI : MonoBehaviour {
 
-    private Camera _observedCamera;
-    private Text _uiTextField;
+    public Camera observedCamera;
+    public Text uiTextField;
 
     private float _avgDeltaTime;
     private string _avgFPS;
@@ -21,18 +21,15 @@ public class SCG_CameraUI : MonoBehaviour {
 
     private void _Initialize()
     {
-        _observedCamera = transform.root.GetComponent<Camera>();
-        _uiTextField = transform.GetChild(0).GetComponent<Text>();
-
         _avgDeltaTime = Time.deltaTime;
     }
 
     private void _UIUpdate()
     {
-        _avgDeltaTime = Mathf.Lerp(_avgDeltaTime, Time.deltaTime, .01f);
+        _avgDeltaTime = Mathf.Lerp(_avgDeltaTime, Time.unscaledDeltaTime, .05f);
 
         _avgFPS = string.Format("{0:000.00}", 1 / _avgDeltaTime);
 
-        _uiTextField.text = "Camera Frustum Angle: " + _observedCamera.fieldOfView + "\nAverage FPS: " + _avgFPS;
+        uiTextField.text = "Camera Frustum Angle: " + observedCamera.fieldOfView + "\nAverage FPS: " + _avgFPS;
     }
 }
